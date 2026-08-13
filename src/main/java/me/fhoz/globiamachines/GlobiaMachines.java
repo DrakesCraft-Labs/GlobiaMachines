@@ -4,7 +4,6 @@ import com.github.drakescraft_labs.slimefun4.api.SlimefunAddon;
 import com.github.drakescraft_labs.slimefun4.api.player.PlayerProfile;
 import com.github.drakescraft_labs.slimefun4.libraries.dough.collections.Pair;
 import com.github.drakescraft_labs.slimefun4.libraries.dough.config.Config;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 import lombok.SneakyThrows;
 import me.fhoz.globiamachines.utils.Utils;
 import com.github.drakescraft_labs.slimefun4.legacy.api.BlockStorage;
@@ -47,9 +46,13 @@ public class GlobiaMachines extends JavaPlugin implements SlimefunAddon {
         // Read something from your config.yml
         Config cfg = new Config(this);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "Fhoz/GlobiaSlimefun/master/").start();
-        }
+        // Aqui iba el autoactualizador, que se traia el jar del repositorio de upstream.
+        //
+        // Se quita entero en vez de apagarlo por configuracion: este jar esta recompilado contra
+        // el Slimefun repaquetado del servidor, asi que bajarse el de upstream encima dejaria el
+        // addon sin cargar. Hasta ahora lo unico que lo frenaba era que su condicion exige una
+        // version que empiece por "DEV", y las nuestras no -- una coincidencia que se rompe el dia
+        // que alguien toque la cadena de version. Se despliega por SFTP, como el resto.
 
         // Register ACT Recipes
         Iterator<Recipe> recipeIterator = Bukkit.recipeIterator();
