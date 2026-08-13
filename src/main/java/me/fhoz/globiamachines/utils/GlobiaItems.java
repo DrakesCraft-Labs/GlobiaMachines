@@ -12,7 +12,7 @@ import org.bukkit.Material;
  */
 public class GlobiaItems {
 
-    public static final SlimefunItemStack BUDGET_DUST_FABRICATOR = new SlimefunItemStack("BUDGET_DUST_FABRICATOR",
+    public static final SlimefunItemStack BUDGET_DUST_FABRICATOR = new SlimefunItemStack("GLOBIA_BUDGET_DUST_FABRICATOR",
             Material.SMOKER,
             "&cBomba de polvo económica",
             "",

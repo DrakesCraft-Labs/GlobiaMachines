@@ -108,7 +108,7 @@ public class BudgetDustFabricator extends AContainer implements RecipeDisplayIte
     @Nonnull
     @Override
     public String getMachineIdentifier() {
-        return "BUDGET_DUST_FABRICATOR";
+        return "GLOBIA_BUDGET_DUST_FABRICATOR";
     }
 
     @Override
