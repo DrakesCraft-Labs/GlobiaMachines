@@ -17,7 +17,7 @@ public final class GlobiaItemSetup {
     // ItemGroup
     private static final NestedItemGroup globiamachines = new NestedItemGroup(
             new NamespacedKey(GlobiaMachines.getInstance(), "globiaslimefun"),
-            new CustomItemStack(Material.SMOKER, "&6全球机器")
+            new CustomItemStack(Material.SMOKER, "&6GlobiaMachines")
     );
 
 

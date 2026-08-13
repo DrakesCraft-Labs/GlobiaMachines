@@ -56,7 +56,7 @@ public class BudgetDustFabricator extends AContainer implements RecipeDisplayIte
 
         for (SlimefunItemStack dust : Constants.dusts) {
             displayRecipes.add(new CustomItemStack(Material.COBBLESTONE,
-                    "&f任意圆石变种", "&7圆石", "&7安山岩", "&7闪长岩", "&7花岗岩"
+                    "&fCualquier variante de piedra", "&7Piedra", "&7Andesita", "&7Diorita", "&7Granito"
             ));
             displayRecipes.add(dust);
         }
