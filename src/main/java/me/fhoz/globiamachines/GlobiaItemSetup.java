@@ -1,6 +1,7 @@
 package me.fhoz.globiamachines;
 
 import com.github.drakescraft_labs.slimefun4.api.items.groups.NestedItemGroup;
+import com.github.drakescraft_labs.slimefun4.api.items.groups.SubItemGroup;
 import com.github.drakescraft_labs.slimefun4.api.recipes.RecipeType;
 import com.github.drakescraft_labs.slimefun4.implementation.SlimefunItems;
 import com.github.drakescraft_labs.slimefun4.libraries.dough.items.CustomItemStack;
@@ -20,12 +21,18 @@ public final class GlobiaItemSetup {
             new CustomItemStack(Material.SMOKER, "&6maquina global")
     );
 
+    private static final SubItemGroup machines = new SubItemGroup(
+            new NamespacedKey(GlobiaMachines.getInstance(), "machines"),
+            globiamachines,
+            new CustomItemStack(Material.GRINDSTONE, "&6Maquinas globales")
+    );
+
 
     private GlobiaItemSetup() {
     }
 
     public static void setup(@Nonnull GlobiaMachines plugin) {
-        new BudgetDustFabricator(globiamachines, GlobiaItems.BUDGET_DUST_FABRICATOR,
+        new BudgetDustFabricator(machines, GlobiaItems.BUDGET_DUST_FABRICATOR,
                 RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GRINDSTONE), new ItemStack(Material.GRINDSTONE),
                 new ItemStack(Material.GRINDSTONE),

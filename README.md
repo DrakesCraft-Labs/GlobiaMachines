@@ -1,20 +1,45 @@
-# Slimefun4 Addon
-This is an example Repository for a generic Slimefun4 Addon.
-In the top left is a button "Use this template", click this to create your own Addon for Slimefun4 using this basic template.
+<p align="center">
+  <img src="docs/banner.svg" alt="GlobiaMachines banner" width="100%">
+</p>
 
-## How to create your own addon.
-This is a template repository that you can use to create your own Slimefun4 Addon.<br>
-We have also written an extensive step-by-step tutorial which you can find here:<br>
-https://github.com/Slimefun/Slimefun4/wiki/Developer-Guide
+# GlobiaMachines
 
-## Changing some important things
-Navigate to `src/main/java` and rename the package and the .java File to your liking.<br>
-Suggestion: "me.yourname.yourproject" (all lower case) and "ProjectName.java"<br>
-Example: "me.thebusybiscuit.cooladdon" and "CoolAddon.java"
+GlobiaMachines is a maintained Slimefun addon for the DrakesCraft 1.21.11 ecosystem. It restores the Budget Dust Fabricator as a compact early-game machine while preserving its original Slimefun item ID and stored-block compatibility.
 
-Navigate to `src/main/resources/plugin.yml` and change the "author" and "main" attributes.
-You may also want to change the description to something meaningful.
+## Features
 
-Navigate to `pom.xml` and change the group id to "me.%Your name%" and change the artifact id to the name of your Project.
+- Budget Dust Fabricator with an energy-backed processing cycle.
+- Native integration with the DrakesCraft Slimefun core namespace.
+- Dedicated nested guide category and machine subgroup.
+- Spanish in-game naming for the DrakesCraft community.
+- Stable `GLOBIA_BUDGET_DUST_FABRICATOR` identity for existing worlds.
 
-After that you are good to go, you can now start developing your own Addon for Slimefun4.
+## Compatibility
+
+| Component | Target |
+| --- | --- |
+| Minecraft | 1.21.11 |
+| Server | Paper / Purpur |
+| Java | 21 |
+| Slimefun | DrakesCraft maintained core |
+
+This repository is maintained independently by DrakesCraft-Labs. It is not a fork dependency and does not require the upstream repository at runtime.
+
+## Build
+
+```bash
+mvn clean verify
+```
+
+The production artifact is written to `target/GlobiaSlimefun v1.0.0.jar`.
+
+## Operational Notes
+
+- Do not rename registered Slimefun IDs after deployment.
+- Back up Slimefun block data before replacing production artifacts.
+- A full server restart is required after updating the JAR.
+- Existing machines remain valid because this port does not migrate or rewrite stored data.
+
+## License
+
+See [LICENSE](LICENSE). Maintained for DrakesCraft by [DrakesCraft-Labs](https://github.com/DrakesCraft-Labs).
