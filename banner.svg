@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">GlobiaMachines</title>
+  <desc id="desc">Animated DrakesCraft-Labs banner for the GlobiaMachines Slimefun addon.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b18"/>
+      <stop offset="0.52" stop-color="#12352c"/>
+      <stop offset="1" stop-color="#24133d"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#53e09b"/>
+      <stop offset="0.5" stop-color="#f2c75c"/>
+      <stop offset="1" stop-color="#9b6cff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#53e09b" fill="none">
+    <path d="M0 74h1200M0 160h1200M0 246h1200"/>
+    <path d="M80 0v320M240 0v320M400 0v320M560 0v320M720 0v320M880 0v320M1040 0v320"/>
+  </g>
+  <g transform="translate(92 58)">
+    <rect width="204" height="204" rx="34" fill="#08120f" stroke="url(#metal)" stroke-width="4"/>
+    <circle cx="102" cy="102" r="58" fill="none" stroke="#53e09b" stroke-width="12" stroke-dasharray="58 18" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 102 102" to="360 102 102" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="102" cy="102" r="25" fill="#f2c75c">
+      <animate attributeName="opacity" values=".65;1;.65" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M102 20v26M102 158v26M20 102h26M158 102h26" stroke="#9b6cff" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="350" y="130" fill="#ffffff" font-size="66" font-weight="700">GlobiaMachines</text>
+    <text x="354" y="178" fill="#a8dbc5" font-size="25">Compact Slimefun engineering for DrakesCraft</text>
+    <text x="354" y="232" fill="#f2c75c" font-size="19" font-weight="600">MINECRAFT 1.21.11  /  JAVA 21  /  DRAKESCRAFT-LABS</text>
+  </g>
+  <rect y="306" width="1200" height="14" fill="url(#metal)">
+    <animate attributeName="opacity" values=".65;1;.65" dur="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
