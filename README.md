@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DrakesCraft-Labs/GlobiaMachines/main/docs/banner.svg" alt="GlobiaMachines banner" width="100%">
+  <img src="https://raw.githubusercontent.com/DrakesCraft-Labs/GlobiaMachines/main/banner.svg" alt="GlobiaMachines banner" width="100%">
 </p>
 
 # GlobiaMachines
